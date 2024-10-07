@@ -22,9 +22,9 @@
             </header>
 
             <div class="bottom-nav-section">
-                <nav class="site-nav">
+                <nav class="site-header-nav">
                     <ul>
-                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Главное</a></li>
                         <li><a href="#">Треки</a></li>
                         <li><a href="#">Альбомы</a></li>
                         <li><a href="#">Исполнители</a></li>
@@ -35,6 +35,108 @@
                 </div>
             </div>
 
+            <div class = "cite-body-container">
+                <div class = "left-body">
+                    <div class = "site-body-up">
+                        <h1 style="padding-left: 14px;">Главное</h1>
+                        <nav class="site-body-nav">
+                            <ul>
+                                <li><a href="#">ВСЁ</a></li>
+                                <li><a href="#">НАСТРОЕНИЕ И ЖАНРЫ</a></li>
+                                <li><a href="#">НОВЫЕ РЕЛИЗЫ</a></li>
+                                <li><a href="#">ЧАРТ</a></li>
+                                <li><a href="#">ПОДБОРКИ</a></li>
+                                <li><a href="#">НЕЙРОМУЗЫКА</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class = "site-body-middle">
+                        <h2 class = "overlay-text" id = "wave-text">► Моя волна</h2>
+                        <div class="tenor-gif-embed" data-postid="25192894" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+                            <a href="https://tenor.com/view/amalie-steiness-borregaard-loading-gif-loading-gif-25192894">Amalie Steiness GIF</a>
+                            from <a href="https://tenor.com/search/amalie-gifs">Amalie GIFs</a>
+                        </div>
+                        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                    </div>
+                    <div class = "site-body-down">
+                        <h1>Список плейлистов</h1>
+                        <div class="slider">
+                            <div class="slider-wrapper">
+                                <div class="slide">
+                                    <img src="images/image1.jpg" alt="Image 1">
+                                </div>
+                                <div class="slide">
+                                    <img src="images/image1.jpg" alt="Image 2">
+                                </div>
+                                <div class="slide">
+                                    <img src="images/image1.jpg" alt="Image 3">
+                                </div>
+                                <div class="slide">
+                                    <img src="images/image1.jpg" alt="Image 4">
+                                </div>
+                                <div class="slide">
+                                    <img src="images/image1.jpg" alt="Image 5">
+                                </div>
+                            </div>
+                            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="slider-container">
+                    <h2>Вы недавно слушали</h2>
+                    <div class="slider">
+                        <div class="slider-wrapper">
+                            <div class="slide">
+                                <img src="image1.jpg" alt="Image 1">
+                                <p>Дискотека 90-х</p>
+                                <p>Хаус, техно</p>
+                            </div>
+                            <div class="slide">
+                                <img src="image1.jpg" alt="Image 2">
+                                <p>Cover Me With Feel Good</p>
+                                <p>It's a Cover Up</p>
+                            </div>
+                            <div class="slide">
+                                <img src="image1.jpg" alt="Image 3">
+                                <p>Мне нравится</p>
+                            </div>
+                            <div class="slide">
+                                <img src="image1.jpg" alt="Image 4">
+                                <p>музыка качает</p>
+                                <p>Исполнитель народный</p>
+                            </div>
+                            <div class="slide">
+                                <img src="image1.jpg" alt="Image 5">
+                                <p>музыка качает</p>
+                                <p>Исполнитель народный</p>
+                            </div>
+                            <div class="slide">
+                                <img src="image1.jpg" alt="Image 6">
+                                <p>музыка качает</p>
+                                <p>Исполнитель народный</p>
+                            </div>
+
+                        </div>
+                        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                    </div>
+                </div> -->
+                <div class = "right-body">
+                    <h1>Моя музыка</h1>
+                </div>
+            </div>
         </div>
+        <script>
+            document.getElementById('wave-text').addEventListener('click', function() {
+                if (this.innerHTML === '► Моя волна') {
+                    this.innerHTML = 'II&nbsp;&nbsp;Моя волна';
+                    this.removeAttribute('id');
+                } else {
+                    this.innerHTML = '► Моя волна';
+                    this.setAttribute('id', 'wave-text');
+                }
+            });
+        </script>
     </body>
 </html>
