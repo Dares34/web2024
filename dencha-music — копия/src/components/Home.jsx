@@ -1,9 +1,8 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 import Playlist from './Playlist';
 import Slider from './Slider';
 import Footer from './Footer';
-import {Link} from 'react-router-dom';
 
 const Home = () => {
   const [isWaveTextClicked, setIsWaveTextClicked] = useState(false);
