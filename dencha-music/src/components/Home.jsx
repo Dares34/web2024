@@ -1,32 +1,15 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import Header from './Header';
 import Playlist from './Playlist';
 import Slider from './Slider';
 import Footer from './Footer';
 
-// function Home() {
-//   return (
-//     <>
-//       <Header />
-//       <main>
-//         <Slider />
-        
-//         <Playlist />
-//       </main>
-//       <Footer />
-//     </>
-//   );
-// }
-
-// import React from "react";
-// import Header from "./components/Header";
-// import Footer from "./components/Footer";
-// import Slider from "./components/Slider";
-// import Playlist from "./components/Playlist";
-// import "./styles.css";
-
 const Home = () => {
+  const [isWaveTextClicked, setIsWaveTextClicked] = useState(false);
+  const toggleWaveText = () => {
+    setIsWaveTextClicked(!isWaveTextClicked);
+  };
+
   return (
     <div className="container">
       <Header />
@@ -46,13 +29,20 @@ const Home = () => {
             </nav>
           </div>
           <div className="site-body-middle">
-            <h2 className="overlay-text" id="wave-text">► Моя волна</h2>
+            <h2 
+              className="overlay-text" 
+              id={isWaveTextClicked ? "" : "wave-text"}
+              onClick={toggleWaveText}
+              style={{ cursor: "pointer" }}
+            >
+              {isWaveTextClicked ? "II  Моя волна" : "► Моя волна"}
+            </h2>
             <div className="tenor-gif-embed" data-postid="25192894" data-share-method="host" data-aspect-ratio="1" data-width="100%">
               <a href="https://tenor.com/view/amalie-steiness-borregaard-loading-gif-loading-gif-25192894">Amalie Steiness GIF</a>
               from <a href="https://tenor.com/search/amalie-gifs">Amalie GIFs</a>
             </div>
           </div>
-          <Slider/>
+          <Slider />
         </div>
         <div className="right-body">
           <Playlist />
@@ -62,8 +52,5 @@ const Home = () => {
     </div>
   );
 };
-
-// export default App;
-
 
 export default Home;
