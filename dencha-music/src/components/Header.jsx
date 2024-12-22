@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -11,7 +12,9 @@ const Header = () => {
       <div className="right-header-section">
         <img className="icon-ya-plus" src="./assets/images/icon_ya_plus.png" alt="Плюс" />
         <button className="upload-app">Установите приложение</button>
+        <Link to="/login">
         <img className="image-profile" src="./assets/images/icon_profile.png" alt="Профиль" />
+        </Link>
       </div>
     </header>
   );
